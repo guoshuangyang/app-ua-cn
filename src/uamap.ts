@@ -3,6 +3,11 @@ const uaMap: Array<{
   cn: string;
 }> = [
   {
+    ua: "wxwork",
+    cn: "企业微信",
+  },
+  // 企业微信和微信的ua都包含微信的ua一样，所以要放在微信前面
+  {
     ua: "micromessenger",
     cn: "微信",
   },
@@ -45,10 +50,6 @@ const uaMap: Array<{
   {
     ua: "dtdreamweb",
     cn: "浙里办",
-  },
-  {
-    ua: "wxwork",
-    cn: "企业微信",
   },
 ];
 
