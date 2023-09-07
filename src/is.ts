@@ -33,7 +33,7 @@ const whatApp = (): string => {
   return app || "unknown";
 };
 
-const getAppName = (): string => {
+const whatAppName = (): string => {
   const uaItem = whatApp();
   let appName = "";
   for (let i = 0; i < uaMap.length; i++) {
@@ -47,4 +47,12 @@ const getAppName = (): string => {
   return appName || "未知应用";
 };
 
-export { isAndroid, isIos, isMobile, whatApp, getAppName, isSpider };
+export {
+  isAndroid,
+  isIos,
+  isMobile,
+  whatApp,
+  whatAppName,
+  whatAppName as getAppName,
+  isSpider,
+};
