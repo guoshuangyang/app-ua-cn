@@ -1,10 +1,11 @@
 {
   "name": "app-ua-cn",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs,iife --minify --dts-resolve --clean --sourcemap --out-dir dist"
+    "build": "tsup src/index.ts --format esm,cjs,iife --minify --dts-resolve --clean --sourcemap --out-dir dist",
+    "pub": "npm run build && npm publish"
   },
   "exports": {
     ".": {

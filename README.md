@@ -34,8 +34,8 @@ isAndroid() // true or false 判断是否是安卓
 ```js
 import { whatApp, whatAppName } from 'app-ua-cn'
 
-whatApp() // 返回值: wechat | qq | weibo | alipay | dingtalk | taobao | uc | meitu | jd | dtdreamweb | wxwork
+whatApp() // 返回值: wxwork | wechat | qq | weibo | alipay | dingtalk | taobao | uc | meitu | jd | dtdreamweb 
 
-whatAppName() // 返回值：微信 | QQ | 微博 | 支付宝 | 钉钉 | 淘宝 | UC | 美图 | 京东 | 浙里办（阿里巴巴体系的很多都是这个） | 企业微信
+whatAppName() // 返回值：企业微信 | 微信 | QQ | 微博 | 支付宝 | 钉钉 | 淘宝 | UC | 美图 | 京东 | 浙里办（阿里巴巴体系的很多都是这个） 
 ```
 
