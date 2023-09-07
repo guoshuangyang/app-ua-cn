@@ -40,7 +40,7 @@ const whatAppName = (): string => {
     let item = uaMap[i];
     // 如果item.ua是字符串
     if (uaItem === item.ua) {
-      appName = item.ua;
+      appName = item.cn;
       break;
     }
   }
