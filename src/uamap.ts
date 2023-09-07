@@ -19,6 +19,14 @@ const uaMap: Array<{
     cn: "支付宝",
   },
   {
+    ua: "dingtalk",
+    cn: "钉钉",
+  },
+  {
+    ua: "taobao",
+    cn: "淘宝",
+  },
+  {
     ua: "ucbrowser",
     cn: "UC浏览器",
   },
@@ -31,20 +39,12 @@ const uaMap: Array<{
     cn: "美团",
   },
   {
-    ua: "taobao",
-    cn: "淘宝",
-  },
-  {
     ua: "jd",
     cn: "京东",
   },
   {
     ua: "dtdreamweb",
     cn: "浙里办",
-  },
-  {
-    ua: "dingtalk",
-    cn: "钉钉",
   },
   {
     ua: "wxwork",
