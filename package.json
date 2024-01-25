@@ -1,0 +1,43 @@
+{
+  "name": "app-ua-cn",
+  "version": "0.0.4",
+  "description": "",
+  "main": "index.js",
+  "module": "index.mjs",
+  "browser": "index.global.js",
+  "unpkg": "index.global.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs,iife --minify --dts-resolve --clean --sourcemap --out-dir dist",
+    "patch": "npm version patch && npm run build && npm publish",
+    "minor": "npm version minor && npm run build && npm publish",
+    "major": "npm version major && npm run build && npm publish"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "browser": "./dist/index.global.js"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "keywords": [
+    "app",
+    "ua",
+    "cn"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "gsy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guoshuangyang/app-ua-cn"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
+}
