@@ -16,11 +16,14 @@ npm install app-ua-cn
 
 + isAndroid - 是否是安卓
 + isIOS - 是否是IOS
++ isiPad - 是否是ipad
 + isMobile - 是否是移动端
++ isPC - 是否是PC端
 + isSpider - 是否是爬虫
 
+
 ```js
-import { isAndroid, isIOS, isSpider } from 'app-ua-cn'
+import { isAndroid } from 'app-ua-cn'
 
 isAndroid() // true or false 判断是否是安卓
 ```

@@ -1,17 +1,19 @@
 import { uaMap } from "./uamap";
 
+const getUA = () => window.navigator.userAgent.toLowerCase();
+
 const isAndroid = (): boolean => {
-  const ua = window.navigator.userAgent.toLowerCase();
+  const ua = getUA();
   return ua.indexOf("android") > -1 || ua.indexOf("adr") > -1;
 };
 
 const isIos = (): boolean => {
-  const ua = window.navigator.userAgent.toLowerCase();
+  const ua = getUA();
   return !!ua.match(/\(i[^;]+;( u;)? cpu.+mac os x/);
 };
 
 const isSpider = (): boolean => {
-  const ua = window.navigator.userAgent.toLowerCase();
+  const ua = getUA();
   return ua.indexOf("spider") > -1;
 };
 
@@ -19,8 +21,19 @@ const isMobile = (): boolean => {
   return isAndroid() || isIos();
 };
 
+// 判断是不是ipad
+const isiPad = (): boolean => {
+  const ua = getUA();
+  return ua.indexOf("ipad") > -1;
+};
+
+// 判断是不是pc
+const isPC = (): boolean => {
+  return !isMobile() && !isiPad();
+};
+
 const whatApp = (): string => {
-  const ua = window.navigator.userAgent.toLowerCase();
+  const ua = getUA();
   let app = "";
   for (let i = 0; i < uaMap.length; i++) {
     let item = uaMap[i];
@@ -50,9 +63,11 @@ const whatAppName = (): string => {
 export {
   isAndroid,
   isIos,
+  isiPad,
   isMobile,
+  isPC,
+  isSpider,
   whatApp,
   whatAppName,
   whatAppName as getAppName,
-  isSpider,
 };
